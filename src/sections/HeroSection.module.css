@@ -1,0 +1,77 @@
+.hero {
+  padding: 130px 0 80px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Vòng tròn glow trang trí */
+.glow {
+  position: absolute;
+  top: -180px;
+  right: -180px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(108, 99, 255, 0.13) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(108, 99, 255, 0.13);
+  color: var(--accent);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-family: var(--fh);
+  font-size: clamp(38px, 7vw, 64px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, #e8e8f0 40%, var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.role {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.role span {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.desc {
+  max-width: 500px;
+  color: var(--muted);
+  margin-bottom: 32px;
+}
+
+.btnRow {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.statNum {
+  font-family: var(--fh);
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.statLbl {
+  font-size: 12px;
+  color: var(--muted);
+}

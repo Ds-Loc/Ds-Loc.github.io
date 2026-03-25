@@ -1,0 +1,106 @@
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 6px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid var(--border);
+  font-family: var(--fb);
+  background: transparent;
+  color: var(--muted);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.tabActive {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.list {
+  display: grid;
+  gap: 16px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+  transition: border-color 0.2s;
+}
+
+.card:hover {
+  border-color: rgba(0, 217, 160, 0.25);
+}
+
+.cardBody {
+  flex: 1;
+}
+
+.num {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 6px;
+}
+
+.title {
+  font-family: var(--fh);
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.desc {
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 480px;
+  margin-bottom: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.links {
+  display: flex;
+  gap: 12px;
+}
+
+.link {
+  font-size: 13px;
+  color: var(--green);
+  font-weight: 500;
+}
+
+.badge {
+  background: rgba(0, 217, 160, 0.1);
+  color: var(--green);
+  border: 1px solid rgba(0, 217, 160, 0.2);
+  border-radius: 6px;
+  padding: 3px 11px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  height: fit-content;
+}
+
+@media (max-width: 600px) {
+  .card { flex-direction: column; }
+}

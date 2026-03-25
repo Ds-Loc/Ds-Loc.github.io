@@ -1,0 +1,121 @@
+/* ===========================================
+   GLOBAL CSS — import vào main.jsx 1 lần
+   =========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* CSS Variables — thay đổi ở đây = đổi toàn bộ giao diện */
+:root {
+  --bg: #ffffff;
+  --bg2: #f5f5f5;
+  --bg3: #e0e0e0;
+  --accent: #000000;
+  --green: #000000;
+  --text: #000000;
+  --muted: #555555;
+  --border: rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --fh: 'Syne', sans-serif;
+  --fb: 'DM Sans', sans-serif;
+}
+
+/* Light mode was removed since we only have one theme now */
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--fb);
+  font-size: 15px;
+  line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Utility classes — dùng chung trong mọi component */
+.container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 72px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.sec-label {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.sec-title {
+  font-family: var(--fh);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 600px) {
+  .hide-mobile {
+    display: none;
+  }
+}
+
+.layout-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  padding-top: 56px;
+  /* offset navbar */
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.layout-sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 86px;
+}
+
+.layout-main {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 800px) {
+  .layout-wrapper {
+    flex-direction: column;
+  }
+
+  .layout-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
